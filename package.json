@@ -1,0 +1,51 @@
+{
+  "name": "sveltekit-rpc",
+  "version": "0.1.0",
+  "description": "Type-safe API routes for SvelteKit with Zod validation",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "type": "module",
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "test": "vitest",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": [
+    "sveltekit",
+    "typescript",
+    "api",
+    "rpc",
+    "type-safe",
+    "zod"
+  ],
+  "author": "",
+  "license": "MIT",
+  "peerDependencies": {
+    "@sveltejs/kit": "^2.0.0",
+    "zod": "^3.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "tsup": "^8.0.0",
+    "typescript": "^5.0.0",
+    "vitest": "^1.0.0"
+  },
+  "dependencies": {
+    "magic-string": "^0.30.0",
+    "acorn": "^8.0.0"
+  },
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./client": {
+      "types": "./dist/client.d.ts",
+      "import": "./dist/client.js"
+    }
+  }
+}
